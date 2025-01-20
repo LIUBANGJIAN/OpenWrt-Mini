@@ -16,3 +16,12 @@ sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.con
 # 5-添加 PassWall 插件
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
+
+# 6-添加 lucky 插件
+sed -i '$a\src-git lucky https://github.com/gdy666/luci-app-lucky' ./feeds.conf.default
+
+# 7-添加 alist 插件
+sed -i '$a\src-git alist https://github.com/sbwml/luci-app-alist' feeds.conf.default
+
+# 8-添加 open-vm-tools 插件
+sed -i '$a\src-git vmware https://github.com/vmware/open-vm-tools' feeds.conf.default
